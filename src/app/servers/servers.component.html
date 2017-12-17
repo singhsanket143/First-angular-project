@@ -3,9 +3,10 @@
     <div class="col-xs-12">
       <h3>Angular App</h3>
       <hr>
-      <button class="btn btn-danger" [disabled]="!allowNewServer">Add Server</button>
-      <p>{{ allowNewServer }}</p>
-      <p [innerText]="allowNewServer"></p>
+      <button class="btn btn-danger" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
+      <!--<p>{{ allowNewServer }}</p>-->
+      <!--<p [innerText]="allowNewServer"></p>-->
+      <p>{{ serverCreationStatus }}</p>
       <app-server></app-server>
       <app-server></app-server>
     </div>
